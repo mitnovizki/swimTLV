@@ -46,7 +46,7 @@ function disciplineController(disciplineService, nav) {
   function get(req, res) {
     const url = 'mongodb://localhost:27017';
     const dbName = 'fitnetApp';
-    // IFFE((){ }())
+
     (async function mongo() {
       let client;
       try {
