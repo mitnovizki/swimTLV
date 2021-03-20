@@ -1,3 +1,5 @@
+//TODO: get data from external API and represent here sport disciplines 
+
 const axios = require('axios').default;
 
 const xml2js = require('xml2js');
