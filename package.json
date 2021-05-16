@@ -25,6 +25,7 @@
     "mongodb": "^3.6.4",
     "morgan": "^1.10.0",
     "mssql": "^6.3.1",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
