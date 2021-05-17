@@ -10,7 +10,6 @@ const cities = []
 fetch(endpoint)
   .then(blob => blob.json())
   .then(data => { cities.push(...data) })
-// .then(() => console.log(findMatch('Bos', cities)))
 
 function findMatch(wordToMatch, cities) {
   return cities.filter(place => {
@@ -22,10 +21,15 @@ function findMatch(wordToMatch, cities) {
 function displayMatches() {
   const matchArray = findMatch(this.value, cities)
 
-
   let html = matchArray.map(place => {
+    const regex = new RegExp(this.value, 'gi') // global not case sensitive
+
+    //highlight the match
+    const city = place.city.replace(regex, `<span class='hl'>${this.value}</span>`)
+    const state = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
+
     return `<li>
-    <span class ='name'> ${place.city},${place.state}</span>
+    <span class ='name'> ${city},${state}</span>
     <span class ='population'> ${place.population}</span>
     </li>`
   }).join('') // return to string an array that returned by map
@@ -34,7 +38,6 @@ function displayMatches() {
 }
 const searchInput = document.querySelector('.search')
 const suggestions = document.querySelector('.suggestions')
-
 
 searchInput.addEventListener('change', displayMatches)
 searchInput.addEventListener('keyup', displayMatches)
