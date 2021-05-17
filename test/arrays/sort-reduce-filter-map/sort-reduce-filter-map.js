@@ -84,3 +84,13 @@ console.table(ppl)
 //TODO:
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+console.log('Sum up the instances of each of these')
+let sum = data.reduce((obj, curr) => {
+
+  if (!obj[curr]) { obj[curr] = 0; }
+  obj[curr]++
+  return obj
+}, [])
+
+console.log(sum)
