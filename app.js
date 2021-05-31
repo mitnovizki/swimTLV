@@ -44,7 +44,8 @@ const nav = [
   { link: '#intro', title: 'Intro' },
   { link: '#services', title: 'Services' },
   { link: '#team', title: 'Team' },
-  { link: '#pricing', title: 'Pricing' }
+  { link: '#pricing', title: 'Pricing' },
+  { link: '#linksFromPdf', title: 'Links' }
 ];
 
 const disciplineRouter = require('./src/routes/disciplineRoutesMongo')(nav); // disciplineroutes is a function

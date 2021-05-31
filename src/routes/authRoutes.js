@@ -1,11 +1,12 @@
-const express = require('express');
+// console.log(arguments)
 
+
+const express = require('express');
 const { MongoClient } = require('mongodb');
 const passport = require('passport');
-
 const debug = require('debug')('app:authRoutes');
-
 const authRouter = express.Router();
+const authController = require('../controllers/authController')
 
 function router(nav) {
   authRouter.route('/signUp') // it doesn,t have the page but it does generates response
@@ -70,6 +71,16 @@ function router(nav) {
       req.logOut();
       res.redirect('/fitnet'); // check if this call is correct 
     });
+
+  // get links from pdf file and print them out
+  authRouter.route('/links')
+    .get((req, res) => {
+      const { getLinksFromPDF } = authController()
+
+      var result = getLinksFromPDF()
+      console.log(result)
+      res.render('links', { nav, 'title': 'Get links from PDF file' })
+    })
   return authRouter;
 }
 

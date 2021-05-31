@@ -8,7 +8,7 @@ function disciplineController(disciplineService, nav) {
     const dbName = 'fitnetApp';
     const { id } = req.params;
 
-    // IFFE
+    // IIFE
     (async function mongo() {
       let client = new MongoClient(url);
       try {
@@ -21,6 +21,7 @@ function disciplineController(disciplineService, nav) {
         discipline.details = await disciplineService.getDisciplineById(discipline.id);
 
         // debug(discipline.toArray());
+        //@TODO: beautify!!! main page
         res.render('disciplineView',
           {
             nav,
