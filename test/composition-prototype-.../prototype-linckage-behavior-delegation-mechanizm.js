@@ -72,7 +72,7 @@ function Bar(who) {
 /** not recommended: Bar.prototype = new Foo() */
 // bars prototype extends foos prototype
 Bar.prototype = Object.create(Foo.prototype) //linked to foo prototype.
-// constructor is broken here
+// constructor is broken here 
 Bar.prototype.speak = function(){console.log('Hello, ' + this.identity()+ '.')}
 var b1= new Bar('b1')//Hello, who am i? - b1.
 var b2 = new Bar('b2')

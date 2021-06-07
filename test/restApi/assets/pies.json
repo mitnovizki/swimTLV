@@ -1,0 +1,6 @@
+[
+    {"id":1, "name":"apple", "price":19.90, "slicePrice": 4.9, "calories":67},
+    {"id":2, "name":"peach", "price":19.90, "slicePrice": 3.9, "calories":97},
+    {"id":3, "name":"pineapple", "price":19.90, "slicePrice": 9.9, "calories":37},
+    {"id":4, "name":"bananabeee", "price":19.90, "slicePrice": 1.9, "calories":17}
+]
