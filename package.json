@@ -26,7 +26,7 @@
     "morgan": "^1.10.0",
     "mssql": "^6.3.1",
     "mysql": "^2.18.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "nodemo": "^1.0.0",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
